@@ -383,7 +383,7 @@ namespace MoviesDBManager.Controllers
         [HttpGet]
         public ActionResult GroupEmails()
         {
-            return View();
+            return View(); //Doit retourner le form or something
         }
         [HttpPost]
         public ActionResult GroupEmails(List<int> users)

@@ -509,3 +509,23 @@ div2 {
 #popUpMessage {
     font-size: 16px;
 }
+
+.scroll{
+    max-height:200px;
+    overflow-y:scroll;
+}
+
+.displayUsers{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top: 10px;
+    gap:10px;
+    font-weight:bold;
+}
+.adjustButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 10px;
+}

@@ -1,16 +1,64 @@
 ﻿@model MoviesDBManager.Models.User
 @{
     ViewBag.Title = "Group Emails";
-    //var users = (List<user>)
+    var users = MoviesDBManager.Models.DB.Users.SortedUsers();
 }
 
 <h2>Envoi de courriel</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <div>Destinataires</div>
+        <div class="adjustButtons">
+            <button id="SelectAll">Tous</button>
+            <button id="DeSelectAll">Aucun</button>
+        </div>
+        <br />
+        <fieldset>
+            <div class="scroll">
+                @foreach (var item in users)
+                {
+                    <nav>
+                        <div class="displayUsers">
+                            <input type="checkbox" id="@item.Id" name="@item.Id" value="@item.Id" />
+                            @Helper.Image(item.Avatar, "UserSmallAvatar")
+                            <label for="@item.Id">@item.GetFullName()</label>
+                        </div>
+                    </nav>
+                }
+            </div>
+        </fieldset>
+    </fieldset>
+}
 
+<script defer>
+    function validateSelection() {
+        let oneSelected = false;
+        $("input[type='checkbox'][name='SelectedUsers']").each(function () {
+            if ($(this).prop('checked')) oneSelected = true;
+        });
+        if (!oneSelected)
+            $("#Error_SelectedUsers").css("display", "inline");
+        else
+            $("#Error_SelectedUsers").css("display", "none");
+        return oneSelected;
+    }
+    $("input[type='checkbox'][name='SelectedUsers']").change(function () { validateSelection(); });
+    $("form").submit(function () {
+        return validateSelection();
+    })
+    $("#SelectAll").click(function () {
+        $("input[type='checkbox'][name='SelectedUsers']").each(function () { $(this).prop('checked', true) });
+        validateSelection();
+        return false; // prevent form submit
+    })
+    $("#DeSelectAll").click(function () {
+        $("input[type='checkbox'][name='SelectedUsers']").each(function () { $(this).prop('checked', false) });
+        validateSelection();
+        return false; // prevent form submit
+    })
+</script>
 
-@*@foreach (var user in users)
-    {
-
-    }*@
 
 <!--<form action="~/Views/Accounts/GroupEmails" method="post">-->
 @*@for(int index=1) On mettrait l'index de l'usager içi*@
