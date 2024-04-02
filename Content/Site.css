@@ -529,3 +529,8 @@ div2 {
     margin-top: 10px;
     gap: 10px;
 }
+
+.titreEmails{
+    color:dodgerblue;
+    font-weight:bold;
+}

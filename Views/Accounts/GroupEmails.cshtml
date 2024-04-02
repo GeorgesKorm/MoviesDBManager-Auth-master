@@ -8,7 +8,7 @@
 @using (Html.BeginForm())
 {
     <fieldset>
-        <div>Destinataires</div>
+        <div class="titreEmails">Destinataires</div>
         <div class="adjustButtons">
             <button id="SelectAll">Tous</button>
             <button id="DeSelectAll">Aucun</button>
@@ -20,7 +20,7 @@
                 {
                     <nav>
                         <div class="displayUsers">
-                            <input type="checkbox" id="@item.Id" name="@item.Id" value="@item.Id" />
+                            <input type="checkbox" id="@item.Id" name="SelectedUsers" value="@item.Id" />
                             @Helper.Image(item.Avatar, "UserSmallAvatar")
                             <label for="@item.Id">@item.GetFullName()</label>
                         </div>
@@ -29,8 +29,14 @@
             </div>
         </fieldset>
     </fieldset>
+    <fieldset>
+        <div class="titreEmails">
+            Courriel
+        </div>
+    </fieldset>
 }
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer>
     function validateSelection() {
         let oneSelected = false;
