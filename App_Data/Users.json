@@ -1,0 +1,67 @@
+[
+  {
+    "Id": 1,
+    "UserTypeId": 1,
+    "Verified": true,
+    "Blocked": false,
+    "FirstName": "Nicolas",
+    "LastName": "Chourot",
+    "GenderId": 1,
+    "Email": "nicolaschourot@videotron.ca",
+    "Avatar": "/Images_Data/User_Avatars/8f4fcab1-187c-4808-b1d6-f1138a7c0cd2.jpeg",
+    "Password": "password",
+    "CreationDate": "2024-03-14T11:46:53.6287006-04:00"
+  },
+  {
+    "Id": 2,
+    "UserTypeId": 3,
+    "Verified": true,
+    "Blocked": false,
+    "FirstName": "Nicolas",
+    "LastName": "Chourot",
+    "GenderId": 1,
+    "Email": "Nicolas.Chourot@clg.qc.ca",
+    "Avatar": "/Images_Data/User_Avatars/dc030981-588c-4130-97f4-7f38fbee5db4.jpeg",
+    "Password": "password",
+    "CreationDate": "2024-03-15T09:24:40.6980116-04:00"
+  },
+  {
+    "Id": 3,
+    "UserTypeId": 1,
+    "Verified": true,
+    "Blocked": false,
+    "FirstName": "Georges",
+    "LastName": "Korm",
+    "GenderId": 1,
+    "Email": "georges.el.korm@gmail.com",
+    "Avatar": "/Images_Data/User_Avatars/4d8f24c1-715f-4f2c-9287-2286056008cd.jpeg",
+    "Password": "password",
+    "CreationDate": "2024-03-20T08:49:54.4006178-04:00"
+  },
+  {
+    "Id": 4,
+    "UserTypeId": 1,
+    "Verified": true,
+    "Blocked": false,
+    "FirstName": "Georges",
+    "LastName": "El Korm",
+    "GenderId": 1,
+    "Email": "randomerpro@gmail.com",
+    "Avatar": "/Images_Data/User_Avatars/9901a800-7a03-4aa6-b9c8-aa99674579ee.jpeg",
+    "Password": "password",
+    "CreationDate": "2024-03-20T08:53:07.4662088-04:00"
+  },
+  {
+    "Id": 5,
+    "UserTypeId": 3,
+    "Verified": true,
+    "Blocked": false,
+    "FirstName": "Geo",
+    "LastName": "Korm",
+    "GenderId": 1,
+    "Email": "randomerprodev@gmail.com",
+    "Avatar": "/Images_Data/User_Avatars/dd22f0ca-4ea4-4957-bbd4-c406d3fbf017.jpeg",
+    "Password": "password",
+    "CreationDate": "2024-03-25T14:31:46.0071021-04:00"
+  }
+]
